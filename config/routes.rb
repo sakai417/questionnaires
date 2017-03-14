@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'conpanies#index'
+  root to: 'companies#index'
   devise_for :admin_users, controllers: {
     sessions:      'admin_users/sessions',
     passwords:     'admin_users/passwords',
@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     passwords:     'users/passwords',
     registrations: 'users/registrations'
   }
-
+  resources :companies
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,0 +1,4 @@
+=form_for @company do |f|
+  =f.text_field :name, placeholder: "法人名"
+  =f.submit "法人を追加する", class:"btn"
+= link_to "戻る", root_path

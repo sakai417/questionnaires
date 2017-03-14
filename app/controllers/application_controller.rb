@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_params, if: :devise_controller?
   def configure_permitted_params
    devise_parameter_sanitizer.permit(:sign_up) {
-    |u| u.permit(:email, :password, :name, :image, :conpany_id)
+    |u| u.permit(:email, :password, :name, :image, :company_id)
    }
   end
   def after_sign_in_path_for(resource)
