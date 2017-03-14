@@ -65,6 +65,11 @@ gem 'therubyracer'
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'font-awesome-rails'
 gem 'bootstrap-sass', '2.3.2.0'
+# Devise
+gem 'devise'
+gem 'omniauth-twitter'
+gem 'html2slim'
+gem 'devise-i18n'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
