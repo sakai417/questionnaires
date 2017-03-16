@@ -1,24 +1,22 @@
-h2
-  | Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+h2 一般サインアップ
+= form_for(resource, as: resource_name, url: user_company_registration_path) do |f|
   = devise_error_messages!
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      em
-        | (
-        = @minimum_password_length
-        |  characters minimum)
-    br
-    = f.password_field :password, autocomplete: "off"
-  .field
-    = f.label :password_confirmation
-    br
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .actions
-    = f.submit "Sign up"
+  = f.label :email
+  br
+  = f.email_field :email, autofocus: true
+  = f.label :password
+  - if @minimum_password_length
+    em
+      | (
+      = @minimum_password_length
+      |  characters minimum)
+  br
+  = f.password_field :password, autocomplete: "off"
+  = f.label :password_confirmation
+  br
+  = f.password_field :password_confirmation, autocomplete: "off"
+  br
+  = f.hidden_field :company_id, value: @company_id
+  br
+  = f.submit "Sign up"
 = render "users/shared/links"

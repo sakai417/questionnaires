@@ -12,6 +12,6 @@ h2 法人一覧
 br
 = link_to "法人追加", new_company_path
 br
-= link_to "一般ログアウト", destroy_user_session_path, method: :delete
+= link_to "一般ログアウト", destroy_user_company_session_path(current_user.company_id), method: :delete
 br
 = link_to "管理者ログアウト", destroy_admin_user_session_path, method: :delete

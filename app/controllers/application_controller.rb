@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     case resource
     when User
-      root_path
+      company_path(current_user.company_id)
     when AdminUser
       root_path
     end
@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_out_path_for(resource)
   if resource == :user
-    new_user_session_path
+    new_user_company_session_path
   elsif resource == :admin_user
     new_admin_user_session_path
   else
