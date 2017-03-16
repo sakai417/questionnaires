@@ -4,6 +4,9 @@ h2 一般サインアップ
   = f.label :email
   br
   = f.email_field :email, autofocus: true
+  = f.label :name
+  =f.text_field :name, autocomplete: "off"
+  br
   = f.label :password
   - if @minimum_password_length
     em

@@ -16,6 +16,7 @@ class CompaniesController < ApplicationController
   end
 
   def show
+    @users = User.where(company_id: 4)
   end
 
   def edit
