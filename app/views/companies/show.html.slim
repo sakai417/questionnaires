@@ -1,6 +1,6 @@
 h2 = @company.name + "のページ"
 h3 = "社員一覧"
 - @users.each do |user|
-  = user.email
+  = user.name
 br
 = link_to "戻る", root_path
